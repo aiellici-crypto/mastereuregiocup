@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Master Euregio Cup 2027 · Atletica leggera Master</title>
+  <meta name="description" content="Master Euregio Cup: il nuovo meeting transfrontaliero di atletica leggera per la categoria Master. 17 aprile 2027 · Innsbruck · Bolzano · Trento.">
+  <meta name="theme-color" content="#12304f">
+  <link rel="icon" type="image/svg+xml" href="assets/img/runner.svg">
+  <meta property="og:title" content="Master Euregio Cup 2027">
+  <meta property="og:description" content="Il nuovo meeting transfrontaliero di atletica leggera per la categoria Master · Das neue grenzüberschreitende Leichtathletik-Meeting für die Kategorie Master.">
+  <meta property="og:image" content="assets/img/logo.svg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,600;0,800;0,900;1,700;1,800;1,900&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- NAV -->
+  <header class="nav" id="top">
+    <div class="nav__inner">
+      <a class="brand" href="#top" aria-label="Master Euregio Cup">
+        <img src="assets/img/runner.svg" alt="" width="40" height="38">
+        <span class="brand__text"><b>MASTER</b> EUREGIO CUP</span>
+      </a>
+      <nav class="nav__links" aria-label="Menu">
+        <a href="#spirito" data-i18n="nav.spirit">Lo spirito</a>
+        <a href="#perche" data-i18n="nav.why">Perché</a>
+        <a href="#gare" data-i18n="nav.events">Gare</a>
+        <a href="#sedi" data-i18n="nav.venues">Sedi</a>
+      </nav>
+      <div class="lang" role="group" aria-label="Lingua / Sprache">
+        <button type="button" data-lang="it" aria-pressed="true">IT</button>
+        <button type="button" data-lang="de" aria-pressed="false">DE</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero__art">
+        <img src="assets/img/logo.svg" alt="Master Euregio Cup – logo" class="hero__logo">
+        <div class="hero__date">
+          <span class="hero__date-label" data-i18n="hero.save">Save the date</span>
+          <span class="hero__date-value">17.04.2027</span>
+        </div>
+      </div>
+
+      <div class="hero__content">
+        <h1 class="title">
+          <span class="title__a">MASTER</span>
+          <span class="title__b">EUREGIO CUP</span>
+        </h1>
+        <p class="hero__sub" data-i18n="hero.sub">Il nuovo meeting transfrontaliero di atletica leggera per la categoria Master.</p>
+
+        <div class="countdown" aria-live="polite">
+          <div class="countdown__item"><span id="cd-days">---</span><small data-i18n="cd.days">giorni</small></div>
+          <div class="countdown__item"><span id="cd-hours">--</span><small data-i18n="cd.hours">ore</small></div>
+          <div class="countdown__item"><span id="cd-min">--</span><small data-i18n="cd.min">minuti</small></div>
+          <div class="countdown__item"><span id="cd-sec">--</span><small data-i18n="cd.sec">secondi</small></div>
+        </div>
+
+        <div class="hero__cta">
+          <a class="btn btn--primary" href="#gare" data-i18n="hero.cta1">Scopri le gare</a>
+          <a class="btn btn--ghost" href="#" id="ics" download="master-euregio-cup-2027.ics" data-i18n="hero.cta2">Segna la data</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- TICKER -->
+    <div class="ticker" aria-hidden="true">
+      <div class="ticker__track" id="ticker"></div>
+    </div>
+
+    <!-- SPIRIT / INTRO -->
+    <section class="section spirit" id="spirito">
+      <div class="container spirit__grid">
+        <div>
+          <p class="kicker" data-i18n="spirit.kicker">Lo spirito</p>
+          <h2 class="h2" data-i18n="spirit.title">Tre territori. Una pista. Mille emozioni.</h2>
+        </div>
+        <div class="spirit__text">
+          <p class="lead" data-i18n="spirit.p1">La Master Euregio Cup nasce per celebrare chi non smette mai di correre, saltare e lanciare: atlete e atleti Master che ogni giorno dimostrano che <strong>lo sport non ha età</strong>.</p>
+          <p data-i18n="spirit.p2">Tra le montagne dell’Euregio, Tirolo, Alto Adige e Trentino si ritrovano sulla stessa linea di partenza per una giornata di gare vere, sana rivalità e grande amicizia. Ognuno gareggia per i colori della propria società, ogni centesimo limato e ogni centimetro conquistato sono una festa da condividere.</p>
+          <p class="spirit__shout" data-i18n="spirit.shout">Pronti? Ai blocchi di partenza!</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- KEY FACTS -->
+    <section class="section facts">
+      <div class="container facts__grid">
+        <article class="fact fact--orange">
+          <span class="fact__big">~100</span>
+          <p data-i18n="facts.athletes">atlete e atleti Master attesi, uomini e donne</p>
+        </article>
+        <article class="fact fact--navy">
+          <span class="fact__big" data-i18n="facts.openT">Aperto</span>
+          <p data-i18n="facts.open">alla partecipazione di atleti provenienti da altre regioni e Länder</p>
+        </article>
+        <article class="fact fact--yellow">
+          <span class="fact__big" data-i18n="facts.clubT">Società</span>
+          <p data-i18n="facts.club">ogni atleta gareggia per la propria società, non per rappresentative o selezioni regionali</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- WHY -->
+    <section class="section why" id="perche">
+      <div class="container">
+        <p class="kicker kicker--light" data-i18n="why.kicker">Perché questo evento</p>
+        <h2 class="h2 h2--light" data-i18n="why.title">Più di una gara: un traguardo per tutto il movimento Master</h2>
+        <div class="why__grid">
+          <article class="why__card">
+            <span class="why__num">01</span>
+            <h3 data-i18n="why.t1">Più visibilità</h3>
+            <p data-i18n="why.p1">Al movimento Master a livello locale: un evento di questo tipo accende i riflettori e l’interesse dei media.</p>
+          </article>
+          <article class="why__card">
+            <span class="why__num">02</span>
+            <h3 data-i18n="why.t2">Una spinta in più</h3>
+            <p data-i18n="why.p2">Un appuntamento internazionale nel calendario agonistico è la motivazione perfetta per allenarsi e dare il massimo.</p>
+          </article>
+          <article class="why__card">
+            <span class="why__num">03</span>
+            <h3 data-i18n="why.t3">Euregio in pista</h3>
+            <p data-i18n="why.p3">Valorizzare l’Euregio anche sul piano sportivo, unendo Tirolo, Alto Adige e Trentino nel segno dell’atletica.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVENTS -->
+    <section class="section events" id="gare">
+      <div class="container">
+        <div class="events__head">
+          <div>
+            <p class="kicker" data-i18n="ev.kicker">Programma</p>
+            <h2 class="h2" data-i18n="ev.title">Le gare in programma</h2>
+          </div>
+          <div class="legend">
+            <span class="pill pill--m"><b>M</b> · <span data-i18n="ev.men">Uomini</span></span>
+            <span class="pill pill--f"><b>F</b> · <span data-i18n="ev.women">Donne</span></span>
+          </div>
+        </div>
+
+        <ul class="events__grid">
+          <li class="ev ev--run"><span class="ev__name">100 m</span><span class="ev__type" data-i18n="ev.sprint">Velocità</span></li>
+          <li class="ev ev--run"><span class="ev__name">400 m</span><span class="ev__type" data-i18n="ev.sprint">Velocità</span></li>
+          <li class="ev ev--run"><span class="ev__name">1500 m</span><span class="ev__type" data-i18n="ev.middle">Mezzofondo</span></li>
+          <li class="ev ev--run"><span class="ev__name">3000 m <i class="tag tag--f">F</i></span><span class="ev__type" data-i18n="ev.middle">Mezzofondo</span></li>
+          <li class="ev ev--run"><span class="ev__name">5000 m <i class="tag tag--m">M</i></span><span class="ev__type" data-i18n="ev.long">Fondo</span></li>
+          <li class="ev ev--jump"><span class="ev__name" data-i18n="ev.lj">Salto in lungo</span><span class="ev__type" data-i18n="ev.jumps">Salti</span></li>
+          <li class="ev ev--jump"><span class="ev__name" data-i18n="ev.hj">Salto in alto</span><span class="ev__type" data-i18n="ev.jumps">Salti</span></li>
+          <li class="ev ev--throw"><span class="ev__name" data-i18n="ev.sp">Getto del peso</span><span class="ev__type" data-i18n="ev.throws">Lanci</span></li>
+          <li class="ev ev--throw"><span class="ev__name" data-i18n="ev.jt">Lancio del giavellotto</span><span class="ev__type" data-i18n="ev.throws">Lanci</span></li>
+          <li class="ev ev--relay"><span class="ev__name" data-i18n="ev.relay">Staffetta 4x100 m</span><span class="ev__type" data-i18n="ev.team">Squadra</span></li>
+        </ul>
+        <p class="note" data-i18n="ev.note">Le gare senza sigla sono aperte sia agli uomini sia alle donne.</p>
+      </div>
+    </section>
+
+    <!-- VENUES -->
+    <section class="section venues" id="sedi">
+      <div class="container">
+        <p class="kicker" data-i18n="ve.kicker">Sede di gara</p>
+        <h2 class="h2" data-i18n="ve.title">Ogni anno una città diversa</h2>
+        <p class="venues__intro" data-i18n="ve.intro">La sede della Master Euregio Cup cambia ogni anno e attraversa i tre capoluoghi dell’Euregio: un viaggio tra Alpi e Dolomiti, una tappa alla volta.</p>
+        <div class="venues__grid">
+          <article class="venue venue--1">
+            <span class="venue__region" data-i18n="ve.tirol">Tirolo</span>
+            <h3>Innsbruck</h3>
+          </article>
+          <article class="venue venue--2">
+            <span class="venue__region" data-i18n="ve.st">Alto Adige</span>
+            <h3 data-i18n="ve.bz">Bolzano · Bozen</h3>
+          </article>
+          <article class="venue venue--3">
+            <span class="venue__region" data-i18n="ve.tn">Trentino</span>
+            <h3 data-i18n="ve.tnc">Trento · Trient</h3>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- FUNDING -->
+    <section class="section funding">
+      <div class="container funding__box">
+        <div>
+          <p class="kicker kicker--dark" data-i18n="fu.kicker">Finanziamento</p>
+          <h2 class="h2 h2--dark" data-i18n="fu.title">L’Euregio fa il tifo per noi</h2>
+        </div>
+        <p data-i18n="fu.p">L’Euregio sostiene iniziative di questo tipo: per la manifestazione esiste la possibilità di un <strong>contributo da parte dell’Euregio</strong>.</p>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="final">
+      <div class="container final__inner">
+        <p class="final__date">17.04.2027</p>
+        <h2 class="final__title" data-i18n="final.title">Allaccia le scarpe. Si parte!</h2>
+        <p data-i18n="final.p">Il conto alla rovescia è iniziato: preparati a vivere la prima edizione della Master Euregio Cup.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <span class="brand__text"><b>MASTER</b> EUREGIO CUP</span>
+      <span>Tirol · Südtirol · Trentino</span>
+      <span>© 2026 Master Euregio Cup</span>
+    </div>
+  </footer>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
