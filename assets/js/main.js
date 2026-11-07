@@ -93,16 +93,28 @@
   var EVENT_DATE = new Date(2027, 3, 17, 0, 0, 0); // 17.04.2027, ora locale
   var current = "it";
 
-  function store(key, val) { try { localStorage.setItem(key, val); } catch (e) {} }
-  function load(key) { try { return localStorage.getItem(key); } catch (e) { return null; } }
+  // La scelta manuale vale solo per la visita in corso: a ogni nuova visita
+  // il sito torna a seguire la lingua del browser.
+  function store(key, val) { try { sessionStorage.setItem(key, val); } catch (e) {} }
+  function load(key) { try { return sessionStorage.getItem(key); } catch (e) { return null; } }
+
+  // Prima lingua tra le preferenze del browser che sia italiano o tedesco.
+  function browserLang() {
+    var list = (navigator.languages && navigator.languages.length)
+      ? navigator.languages : [navigator.language || navigator.userLanguage || ""];
+    for (var i = 0; i < list.length; i++) {
+      var code = String(list[i]).slice(0, 2).toLowerCase();
+      if (I18N[code]) return code;
+    }
+    return "it"; // browser in altre lingue: italiano
+  }
 
   function detectLang() {
     var q = new URLSearchParams(location.search).get("lang");
     if (q && I18N[q]) return q;
     var saved = load("mec-lang");
     if (saved && I18N[saved]) return saved;
-    var nav = (navigator.language || "it").slice(0, 2).toLowerCase();
-    return nav === "de" ? "de" : "it";
+    return browserLang();
   }
 
   function setLang(lang) {
@@ -120,7 +132,6 @@
     });
     buildTicker(dict.ticker);
     buildIcs(dict);
-    store("mec-lang", lang);
   }
 
   function buildTicker(items) {
@@ -171,7 +182,10 @@
   }
 
   document.querySelectorAll(".lang button").forEach(function (b) {
-    b.addEventListener("click", function () { setLang(b.dataset.lang); });
+    b.addEventListener("click", function () {
+      setLang(b.dataset.lang);
+      store("mec-lang", b.dataset.lang);
+    });
   });
 
   setLang(detectLang());
