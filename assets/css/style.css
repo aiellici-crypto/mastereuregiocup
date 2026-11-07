@@ -264,17 +264,6 @@ a { color: inherit; }
 .venue__region { position: relative; font: italic 700 1rem/1 var(--f-display); letter-spacing: .16em; text-transform: uppercase; opacity: .9; }
 .venue h3 { position: relative; margin: 6px 0 0; font: italic 900 clamp(2.2rem, 4vw, 3rem)/1 var(--f-display); text-transform: uppercase; }
 
-/* Funding */
-.funding { padding: 72px 0; }
-.funding__box {
-  display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; align-items: center;
-  background: var(--yellow); border-radius: 22px; padding: 48px; max-width: calc(var(--maxw) - 48px);
-  box-shadow: 12px 12px 0 var(--orange);
-}
-.funding__box .h2 { margin-bottom: 0; }
-.funding__box p { margin: 0; font-size: 1.25rem; font-weight: 500; }
-.funding__box strong { color: var(--navy); background: var(--white); padding: 0 6px; border-radius: 4px; }
-
 /* Final */
 .final {
   background:
@@ -313,10 +302,9 @@ a { color: inherit; }
 @media (max-width: 860px) {
   .nav__links { display: none; }
   .lang { margin-left: auto; }
-  .spirit__grid, .funding__box { grid-template-columns: 1fr; gap: 20px; }
+  .spirit__grid { grid-template-columns: 1fr; gap: 20px; }
   .facts__grid, .why__grid, .venues__grid { grid-template-columns: 1fr; }
   .section { padding: 72px 0; }
-  .funding__box { padding: 32px 24px; }
 }
 @media (max-width: 560px) {
   body { font-size: 17px; }
@@ -332,5 +320,4 @@ a { color: inherit; }
   .hero__date { padding: 5px 10px 6px; box-shadow: 4px 4px 0 var(--orange); }
   .hero__date-label { font-size: .6rem; }
   .btn { padding: 14px 22px; font-size: 1.1rem; }
-  .funding__box { box-shadow: 8px 8px 0 var(--orange); }
 }

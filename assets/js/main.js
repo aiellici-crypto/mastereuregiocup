@@ -38,8 +38,6 @@
       "ve.intro": "La sede della Master Euregio Cup cambia ogni anno e attraversa i tre capoluoghi dell’Euregio: un viaggio tra Alpi e Dolomiti, una tappa alla volta.",
       "ve.tirol": "Tirolo", "ve.st": "Alto Adige", "ve.tn": "Trentino",
       "ve.bz": "Bolzano · Bozen", "ve.tnc": "Trento · Trient",
-      "fu.kicker": "Finanziamento", "fu.title": "L’Euregio fa il tifo per noi",
-      "fu.p": "L’Euregio sostiene iniziative di questo tipo: per la manifestazione esiste la possibilità di un <strong>contributo da parte dell’Euregio</strong>.",
       "final.title": "Allaccia le scarpe. Si parte!",
       "final.p": "Il conto alla rovescia è iniziato: preparati a vivere la prima edizione della Master Euregio Cup.",
       "ticker": ["100 m", "400 m", "1500 m", "3000 m", "5000 m", "Salto in lungo", "Salto in alto", "Getto del peso", "Giavellotto", "Staffetta 4x100", "Innsbruck", "Bolzano", "Trento"],
@@ -81,8 +79,6 @@
       "ve.intro": "Der Austragungsort des Master Euregio Cup wechselt jährlich zwischen den drei Landeshauptstädten der Euregio: eine Reise durch Alpen und Dolomiten, Etappe für Etappe.",
       "ve.tirol": "Tirol", "ve.st": "Südtirol", "ve.tn": "Trentino",
       "ve.bz": "Bozen · Bolzano", "ve.tnc": "Trient · Trento",
-      "fu.kicker": "Finanzierung", "fu.title": "Die Euregio drückt uns die Daumen",
-      "fu.p": "Die Euregio unterstützt Initiativen dieser Art: Für die Veranstaltung besteht die Möglichkeit einer <strong>Förderung durch die Euregio</strong>.",
       "final.title": "Schuhe schnüren. Los geht’s!",
       "final.p": "Der Countdown läuft: Mach dich bereit für die erste Ausgabe des Master Euregio Cup.",
       "ticker": ["100 m", "400 m", "1500 m", "3000 m", "5000 m", "Weitsprung", "Hochsprung", "Kugelstoßen", "Speerwurf", "4x100-m-Staffel", "Innsbruck", "Bozen", "Trient"],
@@ -167,7 +163,7 @@
   }
 
   function reveal() {
-    var els = document.querySelectorAll(".fact, .why__card, .ev, .venue, .funding__box, .spirit__text, .h2");
+    var els = document.querySelectorAll(".fact, .why__card, .ev, .venue, .spirit__text, .h2");
     if (!("IntersectionObserver" in window)) return;
     var io = new IntersectionObserver(function (entries) {
       entries.forEach(function (e) {
